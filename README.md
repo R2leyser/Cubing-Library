@@ -4,7 +4,7 @@ This is a project made initally to be part of a discord bot but I decided to mov
 
 **This is very much work in progress still**
 
-# Documentation
+# Documentation (idk if this can be considered one but yeah)
 ```
 this module contains:
 - A scrambler, make WCA (World Cube Association) legal scrambles, illegal but faster scrambles and a funtion that does both
