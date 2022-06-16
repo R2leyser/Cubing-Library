@@ -3,8 +3,7 @@ export class Scrambler
     //wca legal scrambeling 
     async randomState(count: number )
     {
-        if (count < 100){
-            console.log("[Scrambler] random state function ran")
+        if (count <= 100){
             //api stuff to get the scrambles
             const response = 
                 await fetch(`https://scramble-web-api.herokuapp.com/scramble/3x3x3?numberOfScrambles=${count}`, {
@@ -17,8 +16,6 @@ export class Scrambler
             const result = (await response.json());
 
             let scrambles = ''
-            
-            console.log(response)
 
             for (let i in result['scrambles'])
             {
@@ -63,7 +60,6 @@ export class Scrambler
 
     async scrambler(scrambleType: boolean = true, amount:number = 1)
     {
-        console.log("[Scrambler] main function ran")
         if (scrambleType)
         {
             //legal
