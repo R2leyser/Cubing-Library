@@ -3,6 +3,12 @@ import { Algorithms, Scrambler } from "./dist/index";
 const perms = new Algorithms
 const scrambler = new Scrambler
 
-//console.log(perms.getPll("y"))
-const scrambles = await scrambler.scrambler(true, 5) 
-console.log(scrambles)
+try {
+    console.log(perms.getPll("aaaa"))    
+} catch (error) {
+    console.error(error)
+}
+//const scrambles = async () => {
+//    console.log(await scrambler.scrambler(true, 101))
+//}
+//scrambles()

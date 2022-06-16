@@ -3,26 +3,32 @@ export class Scrambler
     //wca legal scrambeling 
     async randomState(count: number )
     {
-        console.log("[Scrambler] random state function ran")
-        //api stuff to get the scrambles
-        const response = 
-            await fetch(`https://scramble-web-api.herokuapp.com/scramble/3x3x3?numberOfScrambles=${count}`, {
-                method: 'GET',
-                headers: {
-                    Accept: 'application/json',
-                }
-            });
+        if (count < 100){
+            console.log("[Scrambler] random state function ran")
+            //api stuff to get the scrambles
+            const response = 
+                await fetch(`https://scramble-web-api.herokuapp.com/scramble/3x3x3?numberOfScrambles=${count}`, {
+                    method: 'GET',
+                    headers: {
+                        Accept: 'application/json',
+                    }
+                });
 
-        const result = (await response.json());
+            const result = (await response.json());
 
-        let scrambles = ''
+            let scrambles = ''
+            
+            console.log(response)
 
-        for (let i in result['scrambles'])
-        {
-            scrambles += `${result['scrambles'][i]}\n`
+            for (let i in result['scrambles'])
+            {
+                scrambles += `${result['scrambles'][i]}\n`
+            }
+
+            return scrambles}
+        else{
+            throw new Error("Too many requests at once, reduce it to max 100 at a time")
         }
-
-        return scrambles
     }
 
     // had to move the actual scramble generation into another function for some reason
