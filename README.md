@@ -21,4 +21,18 @@ Scrambler.scrambler(<scrambleType>, <amount>)
     - scrambleType (Boolean) decides between randomState (true) and randomMoves (false)
     - amount (Number) decides how many scrambles you want bundled
 -----------------------------------------------------------------------------------------
+
+- Alrithm module, get OLL and PLL algorithms and list them
+-----------------------------------------------------------------------------------------
+Algorithms.getPll(<pll>)
+    - pll (string) is the name of the pll you want to get   
+
+Algorithms.getOll(<oll>)
+    - oll (string) is the name of the oll you want to get
+
+Algorithms.listPlls()
+
+Algorithms.listOlls()
+-----------------------------------------------------------------------------------------
+
 ```
