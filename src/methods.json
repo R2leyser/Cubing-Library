@@ -1,0 +1,20 @@
+[    
+    {"methodType":"bigCubes", "list" : [
+        {"name": "Reduction", "tutorial":"https://youtu.be/Pb_2FEUir-I"},
+        {"name": "Yau", "tutorial":"https://youtu.be/KWOZHbDdOeo"},
+        {"name": "Hoya", "tutorial":"https://youtu.be/OiV2w2lbY5c"}
+        ]},
+        
+    {"methodType":"speedMethods", "list" : [
+        {"name":"Roux", "tutorial":"https://youtu.be/ImBWkk-7teA" },
+        {"name":"ZZ", "tutorial":"https://youtu.be/iNSUBnWaRxo" },
+        {"name":"Begginers", "tutorial":"https://youtube.com/playlist?list=PLI24ciRbl8BUHEeOBaLXY4GpaVXSULYp4" },
+        {"name":"Cfop", "tutorial":"https://youtube.com/playlist?list=PLI24ciRbl8BUHEeOBaLXY4GpaVXSULYp4" }
+    ]},
+    
+    {"methodType":"fewestMoves", "list" : [
+        {"name":"NISS", "tutorial": "https://youtu.be/b230h49TVkk"},
+        {"name":"Block building", "tutorial":"https://youtu.be/EVxOn0QVVoE"},
+        {"name":"Skeleton and insertion", "tutorial":"https://youtu.be/zq8JMI5lTtY"}
+    ]}
+]
