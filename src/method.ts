@@ -9,9 +9,7 @@ export class Methods
         {
             typeList.push(methods[i].methodType)
         }
-        if(typeList){
-            return typeList
-        }
+        return typeList
     }
 
     listMethods (methodType: string)
@@ -37,8 +35,8 @@ export class Methods
     }
 
     getTutorial(method:string){
-        var index = 0
-        var index2 = -1
+        var index: number = 0
+        var index2: number = -1
         for (let i = 0; i < methods.length; i++)
         {
             for (let j = 0; j < methods[i].list.length; j++)
