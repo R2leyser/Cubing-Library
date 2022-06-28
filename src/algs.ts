@@ -25,7 +25,6 @@ export class Algorithms
             }
         }
         throw new Error("Oll not found");
-
     }
 
     listPlls()
@@ -41,7 +40,7 @@ export class Algorithms
     listOlls()
     {
         const list: string[] = []
-        for (let i = 0; i < algos.olls.length - 1; i++)
+        for (let i = 0; i < algos.olls.length; i++)
         {
             list.push(algos.olls[i].name)
         }

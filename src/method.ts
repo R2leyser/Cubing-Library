@@ -15,7 +15,6 @@ export class Methods
     listMethods (methodType: string)
     {   
         //gets index of the type     
-        var index:number = -1
         for (let i = 0; i < methods.length; i++)
         {
             if (methods[i].methodType == methodType)
