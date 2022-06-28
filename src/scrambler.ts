@@ -20,11 +20,11 @@ export class Scrambler
 
             const result = (await response.json());
 
-            let scrambles = ''
+            const scrambles = []
 
             for (let i in result['scrambles'])
             {
-                scrambles += `${result['scrambles'][i]}\n`
+                scrambles.push(result['scrambles'][i])
             }
 
             return scrambles
@@ -48,11 +48,11 @@ export class Scrambler
             "D", "D'", "D2" 
         ] 
 
-        let scramble = ""
+        var scramble = ""
         for (let i = 0; i < 10; i++) 
         {
             let index = Math.floor(Math.random() * 18);
-            scramble += ` ${moves[index]}`
+            scramble += `${moves[index]} `
         }
         return scramble
     }
@@ -60,10 +60,10 @@ export class Scrambler
     //other way of scrambelling, faster if you wanna get a big list fast
     randomMoves(count: number)
     {
-        let fullScramble = ""
+        const fullScramble = []
         for (let i = 0; i < count; i++)
         {
-            fullScramble += `${this.genScramble()} \n`
+            fullScramble.push(this.genScramble())
         }
         return fullScramble
     }   

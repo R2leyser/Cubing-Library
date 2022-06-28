@@ -13,45 +13,43 @@ export class Methods
     }
 
     listMethods (methodType: string)
-    {        
+    {   
+        //gets index of the type     
         var index:number = -1
         for (let i = 0; i < methods.length; i++)
         {
             if (methods[i].methodType == methodType)
             {
-                console.log(methods[i].methodType)
-                index = i
+                //adds all the methods to a list
+                const methodList: string[] = []
+                for (let j in methods[i].list)
+                {
+                    methodList.push(methods[i].list[j].name)
+                }
+                return methodList
             }
         }
 
-        if (index == -1){throw new Error(`${methodType} not supported`)}        
-        
-        const methodList: string[] = []
-        for (let i in methods[index].list)
-        {
-            methodList.push(methods[index].list[i].name)
-        }
-        return methodList        
+        throw new Error(`${methodType} not supported`)       
     }
 
     getTutorial(method:string){
-        var index: number = 0
-        var index2: number = -1
+        //iterates through types
         for (let i = 0; i < methods.length; i++)
-        {
+        {   
+            //iterates through methods to match the input
             for (let j = 0; j < methods[i].list.length; j++)
             {
                 if (methods[i].list[j].name == method)
                 {
-                    index = i
-                    index2 = j
+                    if (methods[i].list[j].tutorial != "")
+                    {
+                        return methods[i].list[j].tutorial
+                    }            
+                    throw new Error(`There is no tutorial for ${method}`)
                 }
             }
-        }
-        
-        if (index2 == -1){throw new Error(`${method} not supported`)}
-        if (methods[index].list[index2].tutorial == ""){throw new Error(`There is no tutorial for ${method}`)}
-    
-        return methods[index].list[index2].tutorial            
+        }        
+        throw new Error(`${method} not supported`)
     }
 }

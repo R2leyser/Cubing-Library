@@ -30,34 +30,20 @@ export class Algorithms
 
     listPlls()
     {
-        let list = ""
+        const list: string[] = []
         for (let i = 0; i < algos.plls.length; i++)
         {
-            let index = (i).toLocaleString
-            ('en-US', 
-            {
-                minimumIntegerDigits: 2,
-                useGrouping: false
-            }
-            )            
-            list += `[${index}] ${algos.plls[i].name}\n`
+            list.push(algos.plls[i].name)
         }
         return list
     }
 
     listOlls()
     {
-        let list = ""
-        for (let i = 0; i < algos.olls.length; i++)
+        const list: string[] = []
+        for (let i = 0; i < algos.olls.length - 1; i++)
         {
-            let index = (i).toLocaleString
-            ('en-US', 
-            {
-                minimumIntegerDigits: 2,
-                useGrouping: false
-            }
-            )
-            list += `[${index}] ${algos.olls[i].name}\n`
+            list.push(algos.olls[i].name)
         }
         return list
     }
